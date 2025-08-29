@@ -26,6 +26,32 @@ html {
     font-family: sans-serif;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
+  html, body {
+    height: 100%; /* Ensure html and body take full height */
+    width: 100%;  /* Ensure html and body take full width */
+    overflow: hidden; /* Prevent scrollbars from appearing if not needed */
+}
+
+body {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='100'><text x='10' y='80' font-family='sans-serif' font-size='18' fill='rgba(0, 0, 0, 0.05)' transform='rotate(-25 10 80)'>Kalaiarsi Periasamy</text></svg>");
+    background-repeat: repeat; /* This makes the pattern tile across the background */
+    background-attachment: scroll; /* Scrolls with the content, making it appear "woven" */
+    background-size: 200px 100px; /* Size of one tile (adjust as needed) */
+}
+
+/* Ensure your markmap content doesn't have a solid background itself,
+   or the watermark won't show through. You might need to set
+   background: transparent; on the markmap container if it has one. */
+#markmap-container { /* Replace with your actual markmap container ID/class */
+    background-color: transparent; 
+}
+
+/* For printing */
+@media print {
+    body {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='100'><text x='10' y='80' font-family='sans-serif' font-size='18' fill='rgba(0, 0, 0, 0.08)' transform='rotate(-25 10 80)'>Kalaiarsi Periasamy</text></svg>"); /* Slightly darker for print */
+    }
+}
 #mindmap {
   display: block;
   width: 100vw;
