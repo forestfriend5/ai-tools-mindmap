@@ -107,10 +107,26 @@ body {
 .footer-button button:hover {
     background-color: #218838;
 }
+  #instruction-box {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    font-size: 14px;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
 </head>
 <body>
+  <div id="instruction-box">
+    <p>💡 Click and drag to pan, use your mouse wheel or pinch to zoom!</p>
+</div>
   <div id="watermark">
         Kalaiarsi Periasamy | Bottzle.com
     (for additions / changes, please DM on Linkedin or X : @kalaiarsip)
