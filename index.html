@@ -26,17 +26,21 @@ html {
     font-family: sans-serif;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
-  html, body {
-    height: 100%; /* Ensure html and body take full height */
-    width: 100%;  /* Ensure html and body take full width */
-    overflow: hidden; /* Prevent scrollbars from appearing if not needed */
+ html, body {
+    /* Set dimensions for the background to fill the whole viewport */
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevents scrollbars on the main page */
 }
-
 body {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='100'><text x='10' y='80' font-family='sans-serif' font-size='18' fill='rgba(0, 0, 0, 0.05)' transform='rotate(-25 10 80)'>Kalaiarsi Periasamy</text></svg>");
-    background-repeat: repeat; /* This makes the pattern tile across the background */
-    background-attachment: scroll; /* Scrolls with the content, making it appear "woven" */
-    background-size: 200px 100px; /* Size of one tile (adjust as needed) */
+/* Creates a background image from a tiny, transparent SVG */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='150'><text x='50%' y='50%' font-family='sans-serif' font-size='24' fill='rgba(0,0,0,0.05)' text-anchor='middle' dominant-baseline='middle' transform='rotate(-25 150 75)'>Kalaiarsi Periasamy</text></svg>");
+    /* Repeats the SVG tile across the entire background */
+    background-repeat: repeat;
+    /* Makes the background scroll with the content when you pan/zoom the mindmap */
+    background-attachment: scroll;
+    /* Fallback background color in case the image fails to load */
+    background-color: white; 
 }
 
 /* Ensure your markmap content doesn't have a solid background itself,
